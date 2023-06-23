@@ -1,1 +1,1 @@
-require("keymaps")
+vim.cmd("runtime! lua/keymaps/*.lua")
