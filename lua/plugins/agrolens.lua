@@ -6,4 +6,5 @@ return {
 	config = function()
 		require("telescope").load_extension("agrolens")
 	end,
+	event = "BufNew",
 }
