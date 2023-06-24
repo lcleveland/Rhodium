@@ -1,5 +1,7 @@
 require("lazy").setup("plugins", {
 	install = {
-		colorscheme = { "moonbow" },
+		colorscheme = { "midnight" },
 	},
 })
+vim.cmd([[colorscheme midnight]])
+vim.opt.termguicolors = true
