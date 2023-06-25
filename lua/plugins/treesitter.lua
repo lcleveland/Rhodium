@@ -22,7 +22,7 @@ return {
 					enable = false,
 				},
 			})
-			require("nvim-treesitter.install").compilers = { "clang" }
+			-- require("nvim-treesitter.install").compilers = { "clang" }
 			vim.opt.foldlevel = 20
 			vim.opt.foldmethod = "expr"
 			vim.opt.foldexpr = "nvim_treesitter#foldexpr()"
