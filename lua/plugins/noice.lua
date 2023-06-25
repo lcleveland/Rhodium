@@ -7,6 +7,13 @@ return {
 	},
 	config = function()
 		require("noice").setup({
+			popupmenu = {
+				backend = "cmp",
+			},
+			cmdline = {
+				backend = "cmp",
+				view = "cmdline",
+			},
 			lsp = {
 				override = {
 					["vim.lsp.util.convert_input_to_markdown_lines"] = true,
