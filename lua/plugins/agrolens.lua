@@ -1,6 +1,6 @@
 return {
 	"desdic/agrolens.nvim",
-	dependendies = {
+	dependencies = {
 		"nvim-treesitter/nvim-treesitter",
 	},
 	config = function()
