@@ -65,9 +65,9 @@ return {
 		-- codeium
 		vim.keymap.set("i", "<Tab>", function()
 			return vim.fn["codeium#Accept"]()
-		end, { expr = true })
+		end, { expr = true, desc = "Codeium accept" })
 		vim.keymap.set("i", "<S-Tab>", function()
 			return vim.fn["codeium#CycleCompletions"](1)
-		end, { expr = true })
+		end, { expr = true, desc = "Codeium cycle completions" })
 	end,
 }
