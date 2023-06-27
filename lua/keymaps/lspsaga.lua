@@ -1,59 +1,20 @@
-local wk = require("which-key")
--- lspsaga
-wk.register({
-	c = {
-		name = "code",
-		a = {
-			"<cmd>Lspsaga code_action<CR>",
-			"Code action",
-		},
-	},
-}, { prefix = "<leader>", mode = { "n", "v" } })
-wk.register({
-	c = {
-		o = {
-			"<cmd>Lspsaga outline<CR>",
-			"Outline",
-		},
-	},
-}, { prefix = "<leader>" })
-wk.register({
-	h = {
-		"<cmd>Lspsaga lsp_finder<CR>",
-		"Lsp finder",
-	},
-	r = {
-		"<cmd>Lspsaga rename<CR>",
-		"Lsp rename in file",
-	},
-	R = {
-		"<cmd>Lspsaga rename ++project<CR>",
-		"Lsp rename in project",
-	},
-	p = {
-		"<cmd>Lspsaga peek_definition<CR>",
-		"Lsp peek definition",
-	},
-	d = {
-		"<cmd>Lspsaga go_to_definition<CR>",
-		"Lsp go to definition",
-	},
-	t = {
-		"<cmd>Lspsaga peek_type_definition<CR>",
-		"Lsp peek type definition",
-	},
-}, { prefix = "g" })
-wk.register({
-	K = {
-		"<cmd>Lspsaga hover_doc<CR>",
-		"Lsp hover doc",
-	},
-})
-
--- codeium
-vim.keymap.set("i", "<Tab>", function()
-	return vim.fn["codeium#Accept"]()
-end, { expr = true, desc = "Codeium accept" })
-vim.keymap.set("i", "<S-Tab>", function()
-	return vim.fn["codeium#CycleCompletions"](1)
-end, { expr = true, desc = "Codeium cycle completions" })
+vim.keymap.set(
+	{ "n", "v" },
+	"<leader>ca",
+	"<cmd>Lspsaga code_action<CR>",
+	{ desc = "Lspsaga code action", silent = true }
+)
+vim.keymap.set("n", "<leader>co", "<cmd>Lspsaga outline<CR>", { desc = "Lspsaga outline", silent = true })
+vim.keymap.set("n", "gh", "<cmd>Lspsaga lsp_finder<CR>", { desc = "Lspsaga lsp finder", silent = true })
+vim.keymap.set("n", "gr", "<cmd>Lspsaga rename<CR>", { desc = "Lspsaga rename", silent = true })
+vim.keymap.set("n", "gR", "<cmd>Lspsaga rename ++project<CR>", { desc = "Lspsaga rename in project", silent = true })
+vim.keymap.set("n", "gd", "<cmd>Lspsaga peek_definition<CR>", { desc = "Lspsaga peek definition", silent = true })
+vim.keymap.set("n", "gi", "<cmd>Lspsaga go_to_definition<CR>", { desc = "Lspsaga go to definition", silent = true })
+vim.keymap.set(
+	"n",
+	"gt",
+	"<cmd>Lspsaga peek_type_definition<CR>",
+	{ desc = "Lspsaga peek type definition", silent = true }
+)
+vim.keymap.set("n", "gd", "<cmd>Lspsaga go_to_definition<CR>", { desc = "Lspsaga go to definition", silent = true })
+vim.keymap.set("n", "K", "<cmd>Lspsaga hover_doc<CR>", { desc = "Lspsaga hover doc", silent = true })
