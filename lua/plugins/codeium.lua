@@ -1,5 +1,5 @@
 return {
-	"Exafunction/codeium.nvim",
+	"Exafunction/codeium.vim",
 	event = "VeryLazy",
 	dependencies = {
 		"nvim-lua/plenary.nvim",
@@ -7,6 +7,5 @@ return {
 	},
 	config = function()
 		vim.g.codeium_disable_bindings = 1
-		require("codeium").setup({})
 	end,
 }
